@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    O que é Lorem Ipsum?
+Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e composição. Lorem Ipsum tem sido o texto fictício padrão da indústria desde 1500, quando um impressor desconhecido pegou um modelo de impressão e embaralhou-o para fazer um livro de amostra de tipos. Ele sobreviveu não apenas cinco séculos, mas também ao salto para a composição eletrônica, permanecendo essencialmente inalterado. Ele foi popularizado na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum e, mais recentemente, com software de editoração eletrônica como Aldus PageMaker incluindo versões de Lorem Ipsum.
+
+Porque usamos isso?
+É um fato estabelecido há muito tempo que um leitor se distrairá com o conteúdo legível de uma página ao examinar seu layout. O objetivo de usar Lorem Ipsum é que ele tem uma distribuição de letras mais ou menos normal, ao contrário de usar 'Conteúdo aqui, conteúdo aqui', fazendo com que pareça inglês legível. Muitos pacotes de editoração eletrônica e editores de páginas da web agora usam Lorem Ipsum como seu texto de modelo padrão, e uma pesquisa por 'lorem ipsum' revelará muitos sites ainda em sua infância. Várias versões evoluíram ao longo dos anos, às vezes por acidente, às vezes de propósito (humor injetado e coisas do gênero).
+
+
+De onde isso vem?
+Ao contrário da crença popular, Lorem Ipsum não é simplesmente um texto aleatório. Tem raízes em uma peça da literatura clássica latina de 45 aC, com mais de 2.000 anos. Richard McClintock, um professor de latim no Hampden-Sydney College, na Virgínia, pesquisou uma das palavras latinas mais obscuras, consectetur, de uma passagem de Lorem Ipsum e, examinando as citações da palavra na literatura clássica, descobriu a fonte indubitável. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal) de Cícero, escrito em 45 aC. Este livro é um tratado sobre a teoria da ética, muito popular durante o Renascimento. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit amet ..", vem de uma linha na seção 1.10.32.
+
+O pedaço padrão de Lorem Ipsum usado desde 1500 é reproduzido abaixo para os interessados. As seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" por Cícero também são reproduzidas em sua forma original exata, acompanhadas por versões em inglês da tradução de 1914 por H. Rackham.
+
+Onde posso arranjar algum?
+Existem muitas variações de passagens de Lorem Ipsum disponíveis, mas a maioria sofreu alteração de alguma forma, por humor injetado ou palavras aleatórias que não parecem nem um pouco críveis. Se você for usar uma passagem de Lorem Ipsum, precisa ter certeza de que não há nada embaraçoso escondido no meio do texto. Todos os geradores Lorem Ipsum na Internet tendem a repetir blocos predefinidos conforme necessário, tornando este o primeiro gerador verdadeiro na Internet. Ele usa um dicionário de mais de 200 palavras latinas, combinado com um punhado de estruturas de frases modelo, para gerar Lorem Ipsum que parece razoável. O Lorem Ipsum gerado está, portanto, sempre livre de repetição, humor injetado ou palavras não características, etc.
+
+<p>
+Escolha uma cor de fundo:<br/>
+<form>
+amarelo:<input type = "radio" name="background" id = "amarelo">
+verde:<input type = "radio" name="background" id = "verde">    
+preto:<input type = "radio" name="background" id = "preto">
+laranja:<input type = "radio" name="background" id = "laranja">
+</form>
+</p>
+
+
+<p>
+    Escolha uma cor para o texto:<br/>
+ 
+    <form>
+        amarelo:<input type = "radio" name = "colorText" id = "textYellow">
+        verde:<input type = "radio" name = "colorText" id = "textGreen">    
+        preto:<input type = "radio" name = "colorText" id = "textBlack">
+        laranja:<input type = "radio" name = "colorText" id = "textOrange">
+    </form>
+</p>
+
+Digite o tamanho do texto:
+
+<br/>    
+
+<input type="text" id="size">
+
+<button id="buttonSizeText">Aplicar tamanho</button>
+
+</br>
+</br>
+
+Digite o espaçamento entre as linhas:
+<br/>
+
+<input type="text" id="spacing">
+
+<button id="buttonLineSpacing">Mudar espaçamento entre as linhas</button>
+
+<br/>
+<br/>
+
+Digite o nome da fonte:
+<br/>
+<input type="text" id="fontFamily">
+
+<button id="buttonFontFamily">Mudar fonte</button>
+
+<script type="text/javascript">
+    
+    document.body.style.backgroundColor = localStorage.getItem("cor");
+
+    document.body.style.color = localStorage.getItem("textColor");
+
+    document.body.style.fontSize = localStorage.getItem("textSize");
+
+    document.body.style.lineHeight = localStorage.getItem("lineHeight");
+
+    document.body.style.fontFamily = localStorage.getItem("fontFamily");
+
+    //aqui são as cores de fundo
+    
+    
+        document.body.querySelector("#amarelo").addEventListener("click", function(){
+
+        localStorage.setItem("cor", "yellow");
+        
+        document.body.style.backgroundColor = "yellow";
+    })
+
+
+
+
+    document.body.querySelector("#verde").addEventListener("click", function(){
+
+        localStorage.setItem("cor", "green");
+
+        document.body.style.backgroundColor = "green";
+    })
+
+
+
+
+    document.body.querySelector("#preto").addEventListener("click", function(){
+
+        localStorage.setItem("cor", "black");
+
+        document.body.style.backgroundColor = "black";
+    })
+
+
+
+
+    document.body.querySelector("#laranja").addEventListener("click", function(){
+
+        localStorage.setItem("cor", "orange");
+
+        document.body.style.backgroundColor = "orange";
+    })
+
+
+
+    //aqui são as cores das letras
+    
+
+    document.body.querySelector("#textYellow").addEventListener("click", function(){
+
+        localStorage.setItem("textColor", "yellow");
+
+    document.body.style.color = "yellow";
+    })
+
+
+
+
+    document.body.querySelector("#textGreen").addEventListener("click", function(){
+
+        localStorage.setItem("textColor", "green");
+
+    document.body.style.color = "green";
+    })
+
+
+
+
+    document.body.querySelector("#textBlack").addEventListener("click", function(){
+
+        localStorage.setItem("textColor", "black");
+
+    document.body.style.color = "black";
+    })
+
+
+
+
+    document.body.querySelector("#textOrange").addEventListener("click", function(){
+
+        localStorage.setItem("textColor", "orange");
+
+    document.body.style.color = "orange";
+    })
+
+    
+    
+    
+    //aqui é o tamanho da fonte
+
+    document.querySelector("#buttonSizeText").addEventListener("click",function(){
+        textSize=document.querySelector("#size").value+"px";
+        localStorage.setItem("textSize",textSize)
+        document.body.style.fontSize=textSize
+
+    })
+
+
+
+    //aqui é o espaçamento entre as linhas
+
+    document.querySelector("#buttonLineSpacing").addEventListener("click",function(){
+    lineHeight=document.querySelector("#spacing").value+"px";
+    localStorage.setItem("lineHeight",lineHeight);
+    document.body.style.lineHeight = lineHeight
+    })
+
+
+
+    //aqui é para mudar a fonte
+
+    document.querySelector("#buttonFontFamily").addEventListener("click",function(){
+        fontFamily = document.querySelector("#fontFamily").value;
+        localStorage.setItem("fontFamily", fontFamily);
+        document.body.style.fontFamily = fontFamily;
+    })
+
+
+
+</script>
+
+
+</body>
+</html>
