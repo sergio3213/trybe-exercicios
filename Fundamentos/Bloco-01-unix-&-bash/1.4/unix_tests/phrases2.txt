@@ -1,0 +1,6 @@
+php faz conexão com mysql
+javascript tem recursos dinamicos
+html é a estrutura dos sites
+css deixa o site bonito
+Brasil
+Argentina
