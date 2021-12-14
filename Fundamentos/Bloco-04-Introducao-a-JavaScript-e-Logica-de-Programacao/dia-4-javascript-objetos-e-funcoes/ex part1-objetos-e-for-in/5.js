@@ -1,24 +1,21 @@
 let info1 = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-    recorrente: 'Sim' 
-    };
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim",
+};
 
 let info2 = {
-    personagem: 'Tio Patinhas',
-    origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178'",
-    nota: 'O último MacPatinhas',
-    recorrente: 'Sim',
-    };
+  personagem: "Tio Patinhas",
+  origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178'",
+  nota: "O último MacPatinhas",
+  recorrente: "Sim",
+};
 
-
-
-for(let value in info1){
-    if(value!="recorrente"){
-        console.log(info1[value]+" e "+info2[value]);
-    }
-    else{
-        console.log("Ambos recorrentes");
-    }
+for (let key in info1) {
+  if (key === "recorrente" && info1[key] === "Sim" && info2[key] === "Sim") {
+    console.log("Ambos recorrentes");
+    break;
+  }
+  console.log(`${info1[key]} e ${info2[key]}`);
 }
